@@ -51,6 +51,7 @@ public class TestBase {
 	
 	@AfterSuite
 	public void tearDown() {
+		takeScreenshots();
 		driver.close();
 		driver.quit();
 		log.debug("Close the driver");
@@ -71,5 +72,18 @@ public class TestBase {
 			}
 		}
 		return data;	
+	}
+	public static void takeScreenshots(){
+
+		try {
+			SimpleDateFormat formatter = new SimpleDateFormat("dd_M_yyyy_hh_mm_ss");
+			Date date = new Date();
+			String currentDate = formatter.format(date);
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+ "/" + "Screenshots" + "/" + "Results" +"/"+ currentDate+".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 }
