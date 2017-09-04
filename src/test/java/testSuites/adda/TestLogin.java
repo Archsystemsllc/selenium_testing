@@ -1,10 +1,10 @@
-package testSuites;
+package testSuites.adda;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import base.TestBase;
-import pageObjects.LoginPage;
+import pageObjects.adda.LoginPage;
 
 public class TestLogin extends TestBase {
 	
@@ -17,8 +17,8 @@ public class TestLogin extends TestBase {
 		log.debug("Navigated to Sign In Page");
 	}
 	
-	@Test(dataProvider="getData")
-	public void loginTest(String fullName, String password) throws InterruptedException {
+	@Test(dataProvider="getData", description="1.1 Login Successfully with vallid details")
+	public void loginADDA(String fullName, String password) throws InterruptedException {
 
 		loginPage.enterUsername(fullName);
 		log.debug("Entered name: " + fullName);
@@ -29,10 +29,11 @@ public class TestLogin extends TestBase {
 		
 		loginPage.waitForElementToBeVisible(loginPage.msg);
 		Assert.assertTrue(driver.findElement(loginPage.msg).isDisplayed());
+	
 	}
 	
 	
-	@Test(dataProvider="getData")
+	@Test(dataProvider="getData", description="1.2 Invallid Login Successfully with invallid details")
 	public void invalidLoginTest(String fullName, String password) {
 		
 		loginPage.enterUsername(fullName);

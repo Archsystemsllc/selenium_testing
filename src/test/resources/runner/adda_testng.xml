@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ADDA Suite Tests">
+<parameter name="applicationUrl" value="http://ec2-52-41-209-148.us-west-2.compute.amazonaws.com/imapui/login" />
+  <test name="LoginTest">
+    <classes>
+      <class name="testSuites.adda.TestLogin"/>
+    </classes>
+  </test> <!-- LoginTest -->
+</suite> <!-- LoginSuite -->

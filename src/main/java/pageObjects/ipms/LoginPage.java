@@ -1,7 +1,9 @@
-package pageObjects;
+package pageObjects.ipms;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import pageObjects.BasePage;
 
 public class LoginPage extends BasePage {
 	
