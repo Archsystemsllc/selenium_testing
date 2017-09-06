@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public abstract class BasePage {
 
 	public WebDriver driver;
-	public String url = "http://ec2-52-41-209-148.us-west-2.compute.amazonaws.com/imapui/login";
+	public String url = "http://ec2-34-208-202-43.us-west-2.compute.amazonaws.com/util/login";
 	
 	// Elements / Instance Variables
 	public By msg = By.xpath("//*[@id='header']/nav/div/table/tbody/tr[1]/td[2]/div");

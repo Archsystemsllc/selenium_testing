@@ -17,8 +17,8 @@ public class TestLogin extends TestBase {
 		log.debug("Navigated to Sign In Page");
 	}
 	
-	@Test(dataProvider="getData", description="1.3 Login Successfully with vallid details")
-	public void loginIPMS(String fullName, String password) throws InterruptedException {
+	@Test(dataProvider="getData", description="1.1 Admin Login Test Case for IPMS")
+	public void loginIPMS(String fullName, String password,String userType) throws InterruptedException {
 
 		loginPage.enterUsername(fullName);
 		log.debug("Entered name: " + fullName);
@@ -26,23 +26,9 @@ public class TestLogin extends TestBase {
 		log.debug("Entered password: " + password);
 		loginPage.clickSubmit();
 		log.debug("Clicked submit button");
+		Thread.sleep(5000);
+		System.out.println("User Type : "+loginPage.getAdminName());
+		Assert.assertEquals(userType,loginPage.getAdminName());
 		
-		loginPage.waitForElementToBeVisible(loginPage.msg);
-		Assert.assertTrue(driver.findElement(loginPage.msg).isDisplayed());
-	}
-	
-	
-	@Test(dataProvider="getData", description="1.4 Invalid Login Successfully with invalid details")
-	public void invalidLoginTest(String fullName, String password) {
-		
-		loginPage.enterUsername(fullName);
-		log.debug("Entered name: " + fullName);
-		loginPage.enterPassword(password);
-		log.debug("Entered password: " + password);
-		loginPage.clickSubmit();
-		log.debug("Clicked submit button");
-		
-		loginPage.waitForElementToBeVisible(loginPage.msg);
-		Assert.assertTrue(driver.findElement(loginPage.msg).isDisplayed());
 	}
 }

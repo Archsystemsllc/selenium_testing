@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="IPMS Suite Tests">
-<parameter name="applicationUrl" value="http://ec2-54-148-71-21.us-west-2.compute.amazonaws.com/util/login;jsessionid=72556D6CBF4B822453AE21E789D8BD63" />
+<parameter name="browser" value="IE" />
+<parameter name="applicationUrl" value="http://ec2-34-208-202-43.us-west-2.compute.amazonaws.com/util/login" />
   <test name="LoginTest">
     <classes>
       <class name="testSuites.ipms.TestLogin"/>

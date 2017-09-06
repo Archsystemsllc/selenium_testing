@@ -17,6 +17,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -35,22 +37,23 @@ public class TestBase {
 	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "/src/test/resources/excel/test_data.xlsx");
 	
 	@BeforeSuite
-	@Parameters({"applicationUrl"})
-	public void setUp(String applicationUrl) throws IOException {
+	@Parameters({"browser","applicationUrl"})
+	public void setUp(String browser, String applicationUrl) throws IOException {
 		if (driver==null) {				
 			fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/Config.properties");
 			config = new Properties();
 			config.load(fis);			
-			
-			if (config.getProperty("browser").equals("firefox")) {
-				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/src/test/resources/executables/geckodriver.exe");
-				driver = new FirefoxDriver();
+			// compare the browser type
+			if (browser.equals("IE")) {
+			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"/src/test/resources/executables/IE/IEDriverServer.exe");
+            DesiredCapabilities capabilitiesIE = DesiredCapabilities.internetExplorer();
+            capabilitiesIE.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+            driver = new InternetExplorerDriver(capabilitiesIE);
 			}
-			
-			
+            // Rendering Base URL
 			driver.get(applicationUrl);
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			log.debug("Navigated to site url: " + applicationUrl);
 		}
 	}
@@ -65,7 +68,8 @@ public class TestBase {
 	@DataProvider
 	public Object[][] getData(Method m) {
 		
-		String sheetName = m.getName(); 
+		String sheetName = m.getName();
+		System.out.println("Scheet Name is "+sheetName);
 		int rows = excel.getRowCount(sheetName);
 		int cols = excel.getColumnCount(sheetName);
 		
