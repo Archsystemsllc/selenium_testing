@@ -13,7 +13,7 @@ public class TestLogin extends TestBase {
 	@BeforeMethod
 	public void testSetUp() {
 		loginPage = new LoginPage(driver);
-		loginPage.open();
+		//loginPage.open();
 		log.debug("Navigated to Sign In Page");
 	}
 	

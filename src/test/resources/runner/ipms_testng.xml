@@ -6,6 +6,7 @@
   <test name="LoginTest">
     <classes>
       <class name="testSuites.ipms.TestLogin"/>
+      <class name="testSuites.ipms.sharepoint.CheckSharepointSubmenuTitle"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->
