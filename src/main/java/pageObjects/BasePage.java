@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public abstract class BasePage {
 
 	public WebDriver driver;
-	public String url = "http://ec2-34-208-202-43.us-west-2.compute.amazonaws.com/util/login";
+	public static final String baseURL = "http://ec2-34-208-202-43.us-west-2.compute.amazonaws.com";
 	
 	// Elements / Instance Variables
 	public By msg = By.xpath("//*[@id='header']/nav/div/table/tbody/tr[1]/td[2]/div");
@@ -22,8 +22,7 @@ public abstract class BasePage {
 	}
 	
 	public void open() {
-		
-		driver.get(this.url);
+		driver.get(this.baseURL);
 	}
 	
 }
