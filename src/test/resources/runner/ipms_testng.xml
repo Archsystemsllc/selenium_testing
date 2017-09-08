@@ -5,9 +5,10 @@
 <parameter name="applicationUrl" value="http://ec2-34-208-202-43.us-west-2.compute.amazonaws.com/util/login" />
   <test name="LoginTest">
     <classes>
-      <class name="testSuites.ipms.TestLogin"/>
-      <class name="testSuites.ipms.sharepoint.CheckSharepointSubmenuTitle"/>
-      <class name="testSuites.ipms.dashboards.HorizontalGroups"/>
+      <!-- <class name="testSuites.ipms.TestLogin"/> -->
+      <!-- <class name="testSuites.ipms.sharepoint.CheckSharepointSubmenuTitle"/> -->
+      <!-- <class name="testSuites.ipms.dashboards.HorizontalGroups"/> -->
+      <class name="testSuites.ipms.meetingsmanagement.MeetingsManagement"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->
