@@ -9,7 +9,8 @@
       <!-- <class name="testSuites.ipms.sharepoint.CheckSharepointSubmenuTitle"/> -->
       <!-- <class name="testSuites.ipms.dashboards.HorizontalGroups"/> -->
       <!-- <class name="testSuites.ipms.meetingsmanagement.MeetingsManagement"/> -->
-      <class name="testSuites.ipms.taskmanagement.TaskManagement"/>
+      <!-- <class name="testSuites.ipms.taskmanagement.TaskManagement"/> -->
+      <class name="testSuites.ipms.financialmanagement.FinancialManagement"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->
