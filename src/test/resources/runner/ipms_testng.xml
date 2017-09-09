@@ -8,7 +8,8 @@
       <!-- <class name="testSuites.ipms.TestLogin"/> -->
       <!-- <class name="testSuites.ipms.sharepoint.CheckSharepointSubmenuTitle"/> -->
       <!-- <class name="testSuites.ipms.dashboards.HorizontalGroups"/> -->
-      <class name="testSuites.ipms.meetingsmanagement.MeetingsManagement"/>
+      <!-- <class name="testSuites.ipms.meetingsmanagement.MeetingsManagement"/> -->
+      <class name="testSuites.ipms.taskmanagement.TaskManagement"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->
