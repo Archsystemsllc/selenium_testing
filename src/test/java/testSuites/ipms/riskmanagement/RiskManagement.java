@@ -25,7 +25,7 @@ public class RiskManagement extends TestBase{
 		log.debug("Entered name: " + fullName);
 		loginPage.enterPassword(password);
 		log.debug("Entered password: " + password);
-		loginPage.clicksubmit();
+		loginPage.clickSubmit();
 		log.debug("Clicked submit button");
 		System.out.println("User Type : "+loginPage.getAdminName());
 		Assert.assertEquals(userType,loginPage.getAdminName());
