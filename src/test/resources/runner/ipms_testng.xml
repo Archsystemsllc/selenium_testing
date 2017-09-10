@@ -12,7 +12,8 @@
       <!-- <class name="testSuites.ipms.taskmanagement.TaskManagement"/> -->
       <!-- <class name="testSuites.ipms.financialmanagement.FinancialManagement"/> -->
       <!-- <class name="testSuites.ipms.issuemanagement.IssueManagement"/> -->
-      <class name="testSuites.ipms.riskmanagement.RiskManagement"/>
+      <!-- <class name="testSuites.ipms.riskmanagement.RiskManagement"/> -->
+      <class name="testSuites.ipms.addproject.AddProject"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->

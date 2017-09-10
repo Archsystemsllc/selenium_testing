@@ -24,7 +24,7 @@ public class TestLogin extends TestBase {
 		log.debug("Entered name: " + fullName);
 		loginPage.enterPassword(password);
 		log.debug("Entered password: " + password);
-		loginPage.clickSubmit();
+		loginPage.clicksubmit();
 		log.debug("Clicked submit button");
 		Thread.sleep(5000);
 		System.out.println("User Type : "+loginPage.getAdminName());

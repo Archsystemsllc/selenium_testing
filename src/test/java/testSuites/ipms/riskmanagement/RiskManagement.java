@@ -19,7 +19,7 @@ public class RiskManagement extends TestBase{
 			riskManagementPage= new RiskManagementPage(driver);
 			
 	}
-	@Test(dataProvider="getData", description="1.1 Admin Login Test Case for IPMS")
+	@Test(priority=1,dataProvider="getData", description="1.1 Admin Login Test Case for IPMS")
 	public void loginIPMS(String fullName, String password,String userType) throws InterruptedException {
 		loginPage.enterUsername(fullName);
 		log.debug("Entered name: " + fullName);
@@ -31,7 +31,7 @@ public class RiskManagement extends TestBase{
 		Assert.assertEquals(userType,loginPage.getAdminName());
 		Thread.sleep(2000);
 	}
-	@Test(dataProvider="getData", description="1.7 Add Risk, Upload Risks and View Risks of Risk Management in Dashboard")
+	@Test(priority=2,dataProvider="getData", description="1.7 Add Risk, Upload Risks and View Risks of Risk Management in Dashboard")
 	public void riskManagement(String addRisk, String uploadRisks, String viewRisks){
 			Assert.assertTrue(riskManagementPage.isCheckAndClickAddRiskManagment(addRisk));
 			String uploadrisks;

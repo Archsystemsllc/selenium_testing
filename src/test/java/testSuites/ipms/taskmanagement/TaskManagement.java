@@ -19,7 +19,7 @@ public class TaskManagement extends TestBase{
 			taskManagementPage= new TaskManagementPage(driver);
 			
 	}
-	@Test(dataProvider="getData", description="1.1 Admin Login Test Case for IPMS")
+	@Test(priority=1,dataProvider="getData", description="1.1 Admin Login Test Case for IPMS")
 	public void loginIPMS(String fullName, String password,String userType) throws InterruptedException {
 		loginPage.enterUsername(fullName);
 		log.debug("Entered name: " + fullName);
@@ -31,7 +31,7 @@ public class TaskManagement extends TestBase{
 		Assert.assertEquals(userType,loginPage.getAdminName());
 		Thread.sleep(2000);
 	}
-	@Test(dataProvider="getData", description="1.4 Add Task, Upload Tasks and View tasks in Dashboard")
+	@Test(priority=2,dataProvider="getData", description="1.4 Add Task, Upload Tasks and View tasks in Dashboard")
 	public void taskManagement(String addTask, String uploadTasks, String viewTasks){
 			Assert.assertTrue(taskManagementPage.isCheckAndClickAddTaskManagment(addTask));
 			Assert.assertTrue(taskManagementPage.isCheckAndClickUploadTasksManagment(uploadTasks));
