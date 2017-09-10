@@ -14,7 +14,8 @@
       <!-- <class name="testSuites.ipms.issuemanagement.IssueManagement"/> -->
       <!-- <class name="testSuites.ipms.riskmanagement.RiskManagement"/> -->
       <!-- <class name="testSuites.ipms.addproject.AddProject"/> -->
-      <class name="testSuites.ipms.msprojectintegration.checkMSProjectIntegration"/>
+      <!-- <class name="testSuites.ipms.msprojectintegration.checkMSProjectIntegration"/> -->
+      <class name="testSuites.ipms.artifactsmanager.CheckArtifactsManager"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->
