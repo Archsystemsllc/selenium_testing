@@ -13,7 +13,8 @@
       <!-- <class name="testSuites.ipms.financialmanagement.FinancialManagement"/> -->
       <!-- <class name="testSuites.ipms.issuemanagement.IssueManagement"/> -->
       <!-- <class name="testSuites.ipms.riskmanagement.RiskManagement"/> -->
-      <class name="testSuites.ipms.addproject.AddProject"/>
+      <!-- <class name="testSuites.ipms.addproject.AddProject"/> -->
+      <class name="testSuites.ipms.msprojectintegration.checkMSProjectIntegration"/>
     </classes>
   </test> <!-- LoginTest -->
 </suite> <!-- LoginSuite -->
